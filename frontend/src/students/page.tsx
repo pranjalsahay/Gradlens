@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Topbar } from "@/components/layout/Topbar";
-import { Card } from "@/components/ui/Card";
-import { PerformanceBadge } from "@/components/ui/PerformanceBadge";
+import { Topbar } from "@/components/dashboard/Topbar";
+import { Card } from "@/components/shared/Card";
+import { PerformanceBadge } from "@/components/shared/PerformanceBadge";
 import { STUDENTS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import type { PerformanceStatus } from "@/types";
