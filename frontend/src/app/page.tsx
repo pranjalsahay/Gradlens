@@ -95,16 +95,17 @@ export default function DashboardPage() {
   }, [students, loading]);
 
   // At-risk students panel — derived from live data
-  const atRiskStudents = useMemo(() => {
-    if (loading) return [];
-    return students
-      .filter((s) => s.status === "risk")
-      .map((s) => ({
-        name:  s.name,
-        score: s.score,
-        info:  `${s.department} · Att: ${s.attendance}%`,
-      }));
-  }, [students, loading]);
+const atRiskStudents = useMemo(() => {
+  if (loading) return [];
+  return students
+    .filter((s) => s.status === "risk")
+    .map((s) => ({
+      name: s.name,
+      score: s.score,
+      attendance: s.attendance,
+      info: `${s.department} · Att: ${s.attendance}%`,
+    }));
+}, [students, loading]);
 
   /* ── Stat cards ── */
   const stats = useMemo(
