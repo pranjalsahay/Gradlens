@@ -47,12 +47,12 @@ export const AT_RISK_STUDENTS: AtRiskStudent[] = [
 ];
 
 export const STUDENTS: Student[] = [
-  { id: "1", name: "Aisha Patel",   studentId: "CS-2024-001", department: "Computer Sci.", score: 88, attendance: 92, status: "high",   prediction: "High Performer",   internalMarks: 86, assignmentScore: 90, prevSemesterScore: 84 },
-  { id: "2", name: "Rohan Sharma",  studentId: "MA-2024-045", department: "Mathematics",   score: 71, attendance: 78, status: "medium", prediction: "Medium Performer", internalMarks: 69, assignmentScore: 73, prevSemesterScore: 68 },
-  { id: "3", name: "Priya Nair",    studentId: "PH-2024-023", department: "Physics",       score: 45, attendance: 58, status: "risk",   prediction: "At Risk",          internalMarks: 42, assignmentScore: 48, prevSemesterScore: 50 },
-  { id: "4", name: "Dev Mehta",     studentId: "CS-2024-067", department: "Computer Sci.", score: 81, attendance: 85, status: "high",   prediction: "High Performer",   internalMarks: 79, assignmentScore: 83, prevSemesterScore: 77 },
-  { id: "5", name: "Sara Khan",     studentId: "EN-2024-012", department: "English",       score: 63, attendance: 61, status: "risk",   prediction: "At Risk",          internalMarks: 60, assignmentScore: 65, prevSemesterScore: 67 },
-  { id: "6", name: "Arjun Rao",     studentId: "CH-2024-089", department: "Chemistry",     score: 76, attendance: 80, status: "medium", prediction: "Medium Performer", internalMarks: 74, assignmentScore: 78, prevSemesterScore: 72 },
-  { id: "7", name: "Deepa Menon",   studentId: "MA-2024-031", department: "Mathematics",   score: 91, attendance: 95, status: "high",   prediction: "High Performer",   internalMarks: 89, assignmentScore: 93, prevSemesterScore: 88 },
-  { id: "8", name: "Vikram Das",    studentId: "CH-2024-055", department: "Chemistry",     score: 39, attendance: 55, status: "risk",   prediction: "At Risk",          internalMarks: 36, assignmentScore: 41, prevSemesterScore: 44 },
+  { id: "1", name: "Aisha Patel",   studentId: "CS-2024-001", department: "Computer Sci.", score: 88, attendance: 92, status: "High Performer",   prediction: "High Performer",   internalMarks: 86, assignmentScore: 90, prevSemesterScore: 84 },
+  { id: "2", name: "Rohan Sharma",  studentId: "MA-2024-045", department: "Mathematics",   score: 71, attendance: 78, status: "Medium Performer", prediction: "Medium Performer", internalMarks: 69, assignmentScore: 73, prevSemesterScore: 68 },
+  { id: "3", name: "Priya Nair",    studentId: "PH-2024-023", department: "Physics",       score: 45, attendance: 58, status: "At Risk",   prediction: "At Risk",          internalMarks: 42, assignmentScore: 48, prevSemesterScore: 50 },
+  { id: "4", name: "Dev Mehta",     studentId: "CS-2024-067", department: "Computer Sci.", score: 81, attendance: 85, status: "High Performer",   prediction: "High Performer",   internalMarks: 79, assignmentScore: 83, prevSemesterScore: 77 },
+  { id: "5", name: "Sara Khan",     studentId: "EN-2024-012", department: "English",       score: 63, attendance: 61, status: "At Risk",   prediction: "At Risk",          internalMarks: 60, assignmentScore: 65, prevSemesterScore: 67 },
+  { id: "6", name: "Arjun Rao",     studentId: "CH-2024-089", department: "Chemistry",     score: 76, attendance: 80, status: "Medium Perfomer", prediction: "Medium Performer", internalMarks: 74, assignmentScore: 78, prevSemesterScore: 72 },
+  { id: "7", name: "Deepa Menon",   studentId: "MA-2024-031", department: "Mathematics",   score: 91, attendance: 95, status: "High Performer",   prediction: "High Performer",   internalMarks: 89, assignmentScore: 93, prevSemesterScore: 88 },
+  { id: "8", name: "Vikram Das",    studentId: "CH-2024-055", department: "Chemistry",     score: 39, attendance: 55, status: "At Risk",   prediction: "At Risk",          internalMarks: 36, assignmentScore: 41, prevSemesterScore: 44 },
 ];
