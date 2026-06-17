@@ -118,7 +118,7 @@ export function AtRiskPanel({ students }: { students: AtRiskStudent[] }) {
             <span className="font-mono text-[14px] font-bold" style={{ color }}>
               {s.score}%
             </span>
-            <PerformanceBadge status="risk" size="sm" />
+            <span className="text-red-400 text-xs">At Risk</span>
           </div>
         );
       })}
