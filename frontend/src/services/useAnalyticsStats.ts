@@ -44,7 +44,7 @@ const derived = useMemo(() => {
     : 0;
 
   const atRiskCount = students.filter(
-    (s) => s.status === "risk"
+    (s) => s.status === "At Risk"
   ).length;
 
   const lowAttendanceCount = students.filter(
