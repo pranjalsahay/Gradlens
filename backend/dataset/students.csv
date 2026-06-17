@@ -1,0 +1,33 @@
+
+student_id,name,department,score,attendance,status
+1,Aryan Sharma,CSE,2,92,96,safe
+2,Priya Nair,Physics,2,37,58,at-risk
+3,Rohan Das,Mathematics,2,71,78,safe
+4,Amit Singh,CSE,2,69,72,risk
+5,Sara Khan,English,2,63,61,at-risk
+6,Karan Mehta,IT,2,52,60,risk
+7,Dev Verma,Physics,2,45,58,at-risk
+8,Neha Patel,Chemistry,2,78,86,safe
+9,Vikram Das,Chemistry,2,35,55,at-risk
+10,Meera Iyer,Mathematics,2,48,63,risk
+11,Raj Malhotra,CSE,2,88,94,safe
+12,Sneha Roy,English,2,81,89,safe
+13,Ananya Gupta,IT,2,74,83,safe
+14,Kunal Jain,Physics,2,67,79,safe
+15,Ishita Sen,Chemistry,2,91,97,safe
+16,Harsh Vardhan,CSE,2,55,69,risk
+17,Pooja Sharma,Mathematics,2,84,92,safe
+18,Aditya Kumar,English,2,39,57,at-risk
+19,Ritika Bose,IT,2,73,81,safe
+20,Arjun Reddy,CSE,2,96,99,safe
+21,Tanvi Kapoor,Physics,2,82,88,safe
+22,Yash Gupta,Chemistry,2,59,66,risk
+23,Aarav Mehta,IT,2,77,84,safe
+24,Diya Nair,Mathematics,2,65,76,safe
+25,Kabir Singh,CSE,2,42,59,at-risk
+26,Nidhi Agarwal,English,2,89,93,safe
+27,Rahul Das,Physics,2,54,68,risk
+28,Sanya Kapoor,Chemistry,2,87,91,safe
+29,Virat Sharma,CSE,2,61,74,risk
+30,Anushka Roy,IT,2,79,85,safe
+
