@@ -10,9 +10,9 @@ import type { PerformanceStatus } from "@/types";
 
 const FILTER_OPTIONS: { label: string; value: PerformanceStatus | "all" }[] = [
   { label: "All",           value: "all"   },
-  { label: "High Performer", value: "high"   },
-  { label: "Medium",        value: "medium" },
-  { label: "At Risk",       value: "risk"   },
+  { label: "High Performer", value: "High Performer"   },
+  { label: "Medium Performer",        value: "Medium Performer" },
+  { label: "At Risk",       value: "At Risk"   },
 ];
 
 export default function StudentsPage() {
