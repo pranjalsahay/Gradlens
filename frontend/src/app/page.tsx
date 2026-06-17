@@ -12,8 +12,7 @@ import { Card } from "@/components/shared/Card";
 
 import { TREND_DATA } from "@/lib/data";
 
-const API =
-  process.env.NEXT_PUBLIC_API_URL;
+const API = process.env.NEXT_PUBLIC_API_URL;
 
 export default function DashboardPage() {
   const {
@@ -25,7 +24,6 @@ export default function DashboardPage() {
     atRiskCount,
   } = useAnalytics();
 
-  /* ── CSV Upload state ── */
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [uploadMsg, setUploadMsg] = useState<{ text: string; ok: boolean } | null>(null);
@@ -44,7 +42,6 @@ export default function DashboardPage() {
       if (!res.ok) throw new Error(`Server error ${res.status}`);
       const data = await res.json();
       setUploadMsg({ text: data.message ?? "Upload successful!", ok: true });
-      // Reload the page after a short pause so new data shows up
       setTimeout(() => window.location.reload(), 1200);
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Upload failed";
@@ -54,9 +51,6 @@ export default function DashboardPage() {
     }
   }
 
-  /* ── Derived charts data from live students ── */
-
-  // Subject bar chart — aggregate avg score per department from backend students
   const subjectPerformance = useMemo(() => {
     if (loading || students.length === 0) return [];
     const deptMap: Record<string, { total: number; count: number; max: number }> = {};
@@ -68,13 +62,12 @@ export default function DashboardPage() {
       if (s.score > deptMap[key].max) deptMap[key].max = s.score;
     }
     return Object.entries(deptMap).map(([dept, v]) => ({
-      subject: dept.length > 7 ? dept.slice(0, 7) : dept, // abbreviate long names
+      subject: dept.length > 7 ? dept.slice(0, 7) : dept,
       avgScore: Math.round(v.total / v.count),
       maxScore: v.max,
     }));
   }, [students, loading]);
 
-  // Attendance donut — build buckets from live student attendance values
   const attendanceBuckets = useMemo(() => {
     if (loading || students.length === 0) return [];
     const buckets = [
@@ -94,20 +87,18 @@ export default function DashboardPage() {
     }));
   }, [students, loading]);
 
-  // At-risk students panel — derived from live data
-const atRiskStudents = useMemo(() => {
-  if (loading) return [];
-  return students
-    .filter((s) => s.status === "At Risk")
-    .map((s) => ({
-      name: s.name,
-      score: s.score,
-      attendance: s.attendance,
-      info: `${s.department} · Att: ${s.attendance}%`,
-    }));
-}, [students, loading]);
+  const atRiskStudents = useMemo(() => {
+    if (loading) return [];
+    return students
+      .filter((s) => s.status === "At Risk")
+      .map((s) => ({
+        name: s.name,
+        score: s.score,
+        attendance: s.attendance,
+        info: `${s.department} · Att: ${s.attendance}%`,
+      }));
+  }, [students, loading]);
 
-  /* ── Stat cards ── */
   const stats = useMemo(
     () => [
       {
@@ -144,7 +135,6 @@ const atRiskStudents = useMemo(() => {
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
-      {/* Pass upload handler down to Topbar */}
       <TopbarWithUpload
         title="Analytics Dashboard"
         subtitle="Live · Semester 2 · 2024–25"
@@ -153,7 +143,6 @@ const atRiskStudents = useMemo(() => {
         onUploadClick={() => fileInputRef.current?.click()}
       />
 
-      {/* Hidden file input */}
       <input
         ref={fileInputRef}
         type="file"
@@ -162,14 +151,13 @@ const atRiskStudents = useMemo(() => {
         onChange={(e) => {
           const file = e.target.files?.[0];
           if (file) handleUpload(file);
-          // Reset so same file can be re-uploaded
           e.target.value = "";
         }}
       />
 
-      <main className="flex-1 overflow-y-auto px-3 py-4 sm:px-5 sm:py-5 md:p-7 space-y-3.5 md:space-y-5">
+      {/* FIX 5: unified responsive padding */}
+      <main className="flex-1 overflow-y-auto p-3 sm:p-5 md:p-7 space-y-3 sm:space-y-4 md:space-y-5">
 
-        {/* Upload feedback toast */}
         {uploadMsg && (
           <div
             className={`px-4 py-2.5 rounded-lg text-[13px] border ${
@@ -213,7 +201,8 @@ const atRiskStudents = useMemo(() => {
           )}
         </Card>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-3.5 pb-2">
+        {/* FIX 4: lg breakpoint instead of md for the asymmetric grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-3.5 pb-2">
           <Card title="Attendance Distribution">
             {loading ? (
               <div className="h-[200px] flex items-center justify-center text-gl-muted text-[13px]">
@@ -239,7 +228,6 @@ const atRiskStudents = useMemo(() => {
   );
 }
 
-/* ── Inline Topbar wrapper that adds upload UX ── */
 interface TopbarWithUploadProps {
   title: string;
   subtitle?: string;
@@ -250,7 +238,8 @@ interface TopbarWithUploadProps {
 
 function TopbarWithUpload({ title, subtitle, uploading, onUploadClick }: TopbarWithUploadProps) {
   return (
-    <header className="bg-gl-bg/90 border-b border-gl-border px-7 py-3.5 flex items-center justify-between backdrop-blur-md sticky top-0 z-20">
+    // FIX 1+6: flex-wrap, tighter mobile padding, gap-y for wrapping rows
+    <header className="bg-gl-bg/90 border-b border-gl-border px-4 py-3 sm:px-7 sm:py-3.5 flex flex-wrap items-center justify-between gap-y-2 backdrop-blur-md sticky top-0 z-20">
       <div>
         <h1 className="font-mono font-bold text-[15px] text-white">{title}</h1>
         {subtitle && (
@@ -261,8 +250,10 @@ function TopbarWithUpload({ title, subtitle, uploading, onUploadClick }: TopbarW
         )}
       </div>
 
-      <div className="flex items-center gap-3.5">
-        <select className="bg-gl-surface border border-gl-border text-gl-muted px-3 py-1.5 rounded-lg text-[12px] font-sans outline-none focus:border-gl-accent/60 transition-colors cursor-pointer">
+      {/* FIX 1+2+3: controls wrap on mobile and go full-width */}
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3.5 w-full sm:w-auto">
+        {/* FIX 2: full-width on mobile */}
+        <select className="bg-gl-surface border border-gl-border text-gl-muted px-3 py-1.5 rounded-lg text-[12px] font-sans outline-none focus:border-gl-accent/60 transition-colors cursor-pointer w-full sm:w-auto">
           <option>All Departments</option>
           <option>Computer Science</option>
           <option>Mathematics</option>
@@ -271,10 +262,11 @@ function TopbarWithUpload({ title, subtitle, uploading, onUploadClick }: TopbarW
           <option>English</option>
         </select>
 
+        {/* FIX 3: full-width on mobile, centered icon+label */}
         <button
           onClick={onUploadClick}
           disabled={uploading}
-          className="flex items-center gap-1.5 bg-gl-accent/15 border border-gl-accent/40 text-gl-accent px-4 py-1.5 rounded-lg text-[12px] font-sans transition-all hover:bg-gl-accent/25 hover:shadow-[0_0_12px_rgba(77,124,254,0.2)] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center justify-center gap-1.5 bg-gl-accent/15 border border-gl-accent/40 text-gl-accent px-4 py-1.5 rounded-lg text-[12px] font-sans transition-all hover:bg-gl-accent/25 hover:shadow-[0_0_12px_rgba(77,124,254,0.2)] disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
         >
           {uploading ? (
             <>
