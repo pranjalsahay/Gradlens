@@ -32,19 +32,33 @@ export function useAnalyticsStats(): AnalyticsStats {
     return () => { cancelled = true; clearInterval(interval); };
   }, [tick]);
 
-  const derived = useMemo(() => {
-    const total = students.length;
-    const avgScore = total > 0
-      ? students.reduce((s, x) => s + x.score, 0) / total : 0;
-    const avgAttendance = total > 0
-      ? students.reduce((s, x) => s + x.attendance, 0) / total : 0;
-    const atRiskCount = students.filter(
-      (s) => s.status === "risk" || s.status === "at-risk" || s.status === "At Risk"
-    ).length;
-    const lowAttendanceCount = students.filter((s) => s.attendance < 75).length;
+const derived = useMemo(() => {
+  const total = students.length;
 
-    return { totalStudents: total, avgScore, avgAttendance, atRiskCount, lowAttendanceCount };
-  }, [students]);
+  const avgScore = total > 0
+    ? students.reduce((s, x) => s + x.score, 0) / total
+    : 0;
+
+  const avgAttendance = total > 0
+    ? students.reduce((s, x) => s + x.attendance, 0) / total
+    : 0;
+
+  const atRiskCount = students.filter(
+    (s) => s.status === "risk"
+  ).length;
+
+  const lowAttendanceCount = students.filter(
+    (s) => s.attendance < 75
+  ).length;
+
+  return {
+    totalStudents: total,
+    avgScore,
+    avgAttendance,
+    atRiskCount,
+    lowAttendanceCount,
+  };
+}, [students]);
 
   return {
     ...derived,
