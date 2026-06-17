@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Topbar } from "@/components/dashboard/Topbar";
+import { Topbar } from "@/components/dashboard/topbar";
 import { Card } from "@/components/shared/Card";
 import { PerformanceBadge } from "@/components/shared/PerformanceBadge";
 import { STUDENTS } from "@/lib/data";
