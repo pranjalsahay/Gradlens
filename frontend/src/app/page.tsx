@@ -98,7 +98,7 @@ export default function DashboardPage() {
   const atRiskStudents = useMemo(() => {
     if (loading) return [];
     return students
-      .filter((s) => s.status === "risk" || s.status === "at-risk" || s.status === "At Risk")
+      .filter((s) => s.status === "high")
       .map((s) => ({
         name:  s.name,
         score: s.score,
