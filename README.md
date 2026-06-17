@@ -1,100 +1,170 @@
 <div align="center">
 
-# 📊 GradeLens
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=220&section=header&text=GradeLens&fontSize=70&fontColor=ffffff&animation=fadeIn&desc=AI-Powered%20Student%20Performance%20Analytics&descAlignY=60&descSize=18)
 
-### AI-Powered Student Performance Analytics Dashboard
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1000&color=2C5364&center=true&vCenter=true&width=700&lines=Turning+raw+academic+data+into+actionable+insight;Spotting+at-risk+students+before+it%27s+too+late;FastAPI+%2B+Next.js+%2B+PostgreSQL+%2B+Machine+Learning)](https://git.io/typing-svg)
 
-*Turning raw academic data into actionable insight — built for educators who want to spot risk before it becomes a problem.*
+<br/>
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
-![Status](https://img.shields.io/badge/status-active-success.svg?style=flat-square)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blueviolet.svg?style=flat-square)
+<br/>
+
+![Stars](https://img.shields.io/github/stars/pranjalsahay/Gradlens?style=for-the-badge&color=ffd700&label=Stars)
+![Forks](https://img.shields.io/github/forks/pranjalsahay/Gradlens?style=for-the-badge&color=8a2be2&label=Forks)
+![Issues](https://img.shields.io/github/issues/pranjalsahay/Gradlens?style=for-the-badge&color=ff6347&label=Issues)
+![Last Commit](https://img.shields.io/github/last-commit/pranjalsahay/Gradlens?style=for-the-badge&color=2c5364&label=Last%20Commit)
+![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge)
+
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_App-2c5364?style=for-the-badge)](https://your-deployed-app.vercel.app)
+[![API Docs](https://img.shields.io/badge/📄_API_Docs-Swagger_UI-0f2027?style=for-the-badge)](https://your-backend.onrender.com/docs)
 
 </div>
 
----
+<br/>
 
 ## 📖 Table of Contents
 
 - [Overview](#-overview)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
+- [How It Works](#-how-it-works)
 - [Architecture](#-architecture)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
-  - [Environment Variables](#environment-variables)
+- [Environment Variables](#-environment-variables)
 - [API Overview](#-api-overview)
 - [Deployment](#-deployment)
 - [Roadmap](#-roadmap)
 - [Contributing](#-contributing)
+- [Star History](#-star-history)
 - [License](#-license)
 - [Author](#-author)
 
----
+<br/>
 
 ## 🧭 Overview
 
-**GradeLens** is a full-stack analytics platform that helps educators and administrators understand student performance at a glance. Upload a CSV of grades and attendance, and GradeLens processes it through a predictive analytics pipeline to surface trends, flag at-risk students early, and visualize academic performance over time — all through a clean, interactive dashboard.
+> **GradeLens** turns messy spreadsheets of grades and attendance into clear, predictive insight — so educators can spot struggling students *before* it's too late.
 
-It's built as a modern, cloud-native application: a Next.js frontend talking to a FastAPI backend, backed by a serverless PostgreSQL database on Neon, with the whole thing deployable in minutes on Vercel and Render.
+Upload a CSV, and GradeLens parses it, runs it through a machine learning pipeline, and surfaces an interactive dashboard packed with trends, risk scores, and visual analytics. Built as a modern full-stack app — Next.js on the front, FastAPI on the back, PostgreSQL underneath — and deployable to production in minutes.
 
----
+<p align="right">(<a href="#-table-of-contents">back to top ↑</a>)</p>
+
+<br/>
 
 ## ✨ Features
 
-- 📈 **Student Performance Analytics Dashboard** — A centralized view of grades, trends, and class-wide performance metrics.
-- 📂 **CSV Upload and Processing** — Bulk-import student records and academic data with automated parsing and validation.
-- 🎯 **Predictive Analytics for At-Risk Students** — Machine learning models flag students likely to need early intervention.
-- 🗓️ **Attendance and Academic Trend Analysis** — Track patterns over time to correlate attendance with performance.
-- 📊 **Interactive Data Visualizations** — Charts and graphs that make performance data easy to explore and explain.
-- ⚡ **FastAPI REST APIs** — A fast, typed, well-documented backend powering the entire platform.
-- 🐘 **PostgreSQL Database Integration** — Reliable, relational storage for student and academic data.
-- ☁️ **Cloud Deployment with Vercel and Render** — Production-ready, scalable hosting out of the box.
+<table>
+<tr>
+<td width="50%">
 
----
+### 📈 Performance Dashboard
+A centralized, interactive view of grades, trends, and class-wide performance metrics.
+
+### 📂 CSV Upload & Processing
+Bulk-import student records with automated parsing, cleaning, and validation.
+
+### 🎯 At-Risk Predictions
+Machine learning models flag students who may need early intervention.
+
+</td>
+<td width="50%">
+
+### 🗓️ Attendance & Trend Analysis
+Correlate attendance patterns with academic outcomes over time.
+
+### 📊 Interactive Visualizations
+Rich, explorable charts that make data easy to understand and present.
+
+### ☁️ Cloud-Native Deployment
+Production-ready hosting on Vercel, Render, and Neon — out of the box.
+
+</td>
+</tr>
+</table>
+
+<p align="right">(<a href="#-table-of-contents">back to top ↑</a>)</p>
+
+<br/>
 
 ## 🛠️ Tech Stack
 
-| Layer | Technologies |
-|---|---|
-| **Frontend** | Next.js, React, TypeScript, Tailwind CSS |
-| **Backend** | FastAPI, Python, SQLAlchemy |
-| **Database** | PostgreSQL (hosted on Neon) |
-| **Data & Analytics** | Pandas, NumPy, Scikit-learn |
-| **Deployment** | Vercel (frontend), Render (backend), Neon (database) |
+<div align="center">
 
----
+![Skills](https://skillicons.dev/icons?i=nextjs,react,typescript,tailwind,fastapi,python,postgres,vercel&theme=dark)
+
+| Layer | Technologies |
+|:---|:---|
+| **Frontend** | Next.js · React · TypeScript · Tailwind CSS |
+| **Backend** | FastAPI · Python · SQLAlchemy |
+| **Database** | PostgreSQL (hosted on Neon) |
+| **Data & ML** | Pandas · NumPy · Scikit-learn |
+| **Deployment** | Vercel · Render · Neon |
+
+</div>
+
+<p align="right">(<a href="#-table-of-contents">back to top ↑</a>)</p>
+
+<br/>
+
+## ⚙️ How It Works
+
+```mermaid
+flowchart LR
+    A[📂 CSV Upload] --> B[🧹 Data Cleaning<br/>Pandas]
+    B --> C[🤖 Risk Prediction<br/>Scikit-learn]
+    C --> D[🗄️ Store Results<br/>PostgreSQL]
+    D --> E[📊 Dashboard<br/>Next.js]
+    E --> F((🎯 Insight for<br/>Educators))
+
+    style A fill:#0f2027,color:#fff,stroke:#2c5364
+    style B fill:#203a43,color:#fff,stroke:#2c5364
+    style C fill:#2c5364,color:#fff,stroke:#2c5364
+    style D fill:#2c5364,color:#fff,stroke:#2c5364
+    style E fill:#203a43,color:#fff,stroke:#2c5364
+    style F fill:#0f2027,color:#fff,stroke:#ffd700
+```
+
+<br/>
 
 ## 🏗️ Architecture
 
-```
-┌──────────────┐        REST API         ┌──────────────┐        SQLAlchemy        ┌──────────────┐
-│   Next.js     │  ───────────────────▶  │   FastAPI     │  ───────────────────▶   │  PostgreSQL   │
-│   Frontend    │  ◀───────────────────  │   Backend     │  ◀───────────────────   │   (Neon)      │
-│  (Vercel)     │        JSON             │  (Render)     │                          │              │
-└──────────────┘                         └──────────────┘                          └──────────────┘
-                                                  │
-                                                  ▼
-                                        ┌──────────────────┐
-                                        │  Pandas / NumPy /  │
-                                        │  Scikit-learn      │
-                                        │  (Analytics Engine)│
-                                        └──────────────────┘
+```mermaid
+flowchart TB
+    subgraph Client
+        A[Next.js Frontend<br/>Vercel]
+    end
+    subgraph Server
+        B[FastAPI Backend<br/>Render]
+        D[Analytics Engine<br/>Pandas · NumPy · Scikit-learn]
+    end
+    subgraph Data
+        C[(PostgreSQL<br/>Neon)]
+    end
+
+    A -- REST API / JSON --> B
+    B -- SQLAlchemy --> C
+    B --> D
+    D --> C
+
+    style A fill:#000000,color:#fff
+    style B fill:#009688,color:#fff
+    style D fill:#306998,color:#fff
+    style C fill:#4169E1,color:#fff
 ```
 
-CSV uploads are parsed and cleaned with Pandas, fed through Scikit-learn models to generate at-risk predictions and trend data, then persisted to PostgreSQL and served to the frontend via FastAPI's REST endpoints.
+<p align="right">(<a href="#-table-of-contents">back to top ↑</a>)</p>
 
----
+<br/>
 
 ## 📁 Project Structure
 
@@ -118,22 +188,24 @@ GradeLens/
 └── README.md
 ```
 
-> Adjust this tree to match your actual folder layout if it differs.
+> 💡 Adjust this tree to match your actual folder layout if it differs.
 
----
+<br/>
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed:
+![Node](https://img.shields.io/badge/Node.js-≥18-339933?style=flat-square&logo=node.js&logoColor=white)
+![Python](https://img.shields.io/badge/Python-≥3.10-3776AB?style=flat-square&logo=python&logoColor=white)
+![Git](https://img.shields.io/badge/Git-required-F05032?style=flat-square&logo=git&logoColor=white)
 
-- Node.js (v18 or higher)
-- Python (v3.10 or higher)
-- Git
-- A PostgreSQL database (a free [Neon](https://neon.tech) project works great)
+You'll also need a PostgreSQL database — a free [Neon](https://neon.tech) project works perfectly.
 
-### Backend Setup
+<details>
+<summary><b>🐍 Backend Setup</b> (click to expand)</summary>
+
+<br/>
 
 ```bash
 cd backend
@@ -153,9 +225,14 @@ cp .env.example .env
 uvicorn app.main:app --reload
 ```
 
-The API will be available at `http://localhost:8000`, with interactive docs at `http://localhost:8000/docs`.
+The API will be live at `http://localhost:8000`, with interactive Swagger docs at `http://localhost:8000/docs`.
 
-### Frontend Setup
+</details>
+
+<details>
+<summary><b>⚛️ Frontend Setup</b> (click to expand)</summary>
+
+<br/>
 
 ```bash
 cd frontend
@@ -170,11 +247,17 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-The app will be available at `http://localhost:3000`.
+The app will be live at `http://localhost:3000`.
 
-### Environment Variables
+</details>
 
-**Backend (`backend/.env`)**
+<p align="right">(<a href="#-table-of-contents">back to top ↑</a>)</p>
+
+<br/>
+
+## 🔐 Environment Variables
+
+**Backend** — `backend/.env`
 
 ```env
 DATABASE_URL=postgresql://user:password@host/dbname
@@ -182,47 +265,51 @@ ENVIRONMENT=development
 CORS_ORIGINS=http://localhost:3000
 ```
 
-**Frontend (`frontend/.env.local`)**
+**Frontend** — `frontend/.env.local`
 
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
----
+<br/>
 
 ## 🔌 API Overview
 
-A few of the core endpoints exposed by the backend:
-
 | Method | Endpoint | Description |
-|---|---|---|
-| `POST` | `/api/upload` | Upload a CSV file of student records for processing |
-| `GET` | `/api/students` | Retrieve all student records |
-| `GET` | `/api/students/{id}` | Get details for a specific student |
-| `GET` | `/api/analytics/at-risk` | Get predictions for at-risk students |
-| `GET` | `/api/analytics/trends` | Get attendance and academic trend data |
+|:---|:---|:---|
+| ![POST](https://img.shields.io/badge/POST-49cc90?style=flat-square) | `/api/upload` | Upload a CSV file of student records for processing |
+| ![GET](https://img.shields.io/badge/GET-61affe?style=flat-square) | `/api/students` | Retrieve all student records |
+| ![GET](https://img.shields.io/badge/GET-61affe?style=flat-square) | `/api/students/{id}` | Get details for a specific student |
+| ![GET](https://img.shields.io/badge/GET-61affe?style=flat-square) | `/api/analytics/at-risk` | Get predictions for at-risk students |
+| ![GET](https://img.shields.io/badge/GET-61affe?style=flat-square) | `/api/analytics/trends` | Get attendance and academic trend data |
 
 Full interactive documentation is auto-generated by FastAPI and available at `/docs` once the backend is running.
 
----
+<br/>
 
 ## ☁️ Deployment
 
-| Component | Platform |
-|---|---|
-| Frontend | [Vercel](https://vercel.com) |
-| Backend | [Render](https://render.com) |
-| Database | [Neon](https://neon.tech) (Serverless PostgreSQL) |
+<div align="center">
+
+| Component | Platform | |
+|:---|:---|:---|
+| **Frontend** | Vercel | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new) |
+| **Backend** | Render | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy) |
+| **Database** | Neon | [Create a free database →](https://neon.tech) |
+
+</div>
 
 **Quick steps:**
 
 1. Push your code to GitHub.
 2. Create a Neon PostgreSQL database and copy the connection string.
-3. Deploy the `backend/` directory to Render as a Web Service, setting `DATABASE_URL` and other env vars.
-4. Deploy the `frontend/` directory to Vercel, setting `NEXT_PUBLIC_API_URL` to your Render backend URL.
+3. Deploy `backend/` to Render as a Web Service, setting `DATABASE_URL` and other env vars.
+4. Deploy `frontend/` to Vercel, setting `NEXT_PUBLIC_API_URL` to your Render backend URL.
 5. Update CORS settings on the backend to allow your Vercel domain.
 
----
+<p align="right">(<a href="#-table-of-contents">back to top ↑</a>)</p>
+
+<br/>
 
 ## 🗺️ Roadmap
 
@@ -232,33 +319,54 @@ Full interactive documentation is auto-generated by FastAPI and available at `/d
 - [ ] Support for additional data sources beyond CSV
 - [ ] Mobile-responsive dashboard improvements
 
----
+<br/>
 
 ## 🤝 Contributing
 
-Contributions are welcome! To contribute:
+Contributions are welcome and appreciated!
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m "Add your feature"`)
-4. Push to the branch (`git push origin feature/your-feature`)
+2. Create a feature branch — `git checkout -b feature/your-feature`
+3. Commit your changes — `git commit -m "Add your feature"`
+4. Push the branch — `git push origin feature/your-feature`
 5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE). Update this section if you choose a different license.
-
----
-
-## 👤 Author
-
-**Pranjal Sahay**
-GitHub: [@pranjalsahay](https://github.com/pranjalsahay)
 
 <div align="center">
 
-If you found this project useful, consider giving it a ⭐ on GitHub!
+![Contributors](https://contrib.rocks/image?repo=pranjalsahay/Gradlens)
+
+</div>
+
+<br/>
+
+## ⭐ Star History
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=pranjalsahay/Gradlens&type=Date)](https://star-history.com/#pranjalsahay/Gradlens&Date)
+
+</div>
+
+<br/>
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+<br/>
+
+## 👤 Author
+
+<div align="center">
+
+**Pranjal Sahay**
+
+[![GitHub](https://img.shields.io/badge/GitHub-pranjalsahay-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pranjalsahay)
+
+<br/>
+
+### If GradeLens helped you, consider giving it a ⭐!
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,100:0f2027&height=120&section=footer)
 
 </div>
