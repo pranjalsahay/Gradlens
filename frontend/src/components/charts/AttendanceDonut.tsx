@@ -50,7 +50,7 @@ export function AttendanceDonut({ data, overallAttendance }: AttendanceDonutProp
               ))}
             </Pie>
             <Tooltip
-              formatter={(v: number) => [`${v}%`, ""]}
+              formatter={(value: any) => [`${value}%`, ""]}
               contentStyle={{
                 backgroundColor: "#0d1030",
                 border: "1px solid #1e2560",
