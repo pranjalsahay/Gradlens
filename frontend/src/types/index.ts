@@ -1,4 +1,7 @@
-export type PerformanceStatus = "high" | "medium" | "risk";
+export type PerformanceStatus =
+  | "High Performer"
+  | "Medium Performer"
+  | "At Risk";
 
 export interface Student {
   id: string;
